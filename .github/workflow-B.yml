@@ -13,9 +13,5 @@ on:
 jobs:
   example_job:
     name: Pass input and secrets to my-action
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/actions/my-action@v1
-        with:
-          username: ${{ inputs.username }}
-          token: ${{ secrets.token }}
+    runs-on: mcr.microsoft.com/windows/servercore:1909-amd64
+
